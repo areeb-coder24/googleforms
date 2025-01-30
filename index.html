@@ -7,6 +7,22 @@
     <title>googlr form</title>
 </head>
 <body>
+  <script>
+let weight = prompt("Enter the weight of chicken in grams:");
+
+
+weight = Number(weight);
+
+if (weight > 0) {
+    let price = (weight / 1000) * 500;  
+    let formattedPrice = price.toFixed(2); 
+    alert(`The cost for ${weight} grams of chicken is pkr${formattedPrice}.`);
+    document.write(`The cost for ${weight} grams of chicken is pkr${formattedPrice}.`);
+} else {
+    alert("Oops! Please enter a valid positive number for the weight.");
+    document.write("Oops! Please enter a valid positive number for the weight.");
+}
+  </script>
 <div class="main">
   <div class="container">
     <img class="image" src="download.png">
