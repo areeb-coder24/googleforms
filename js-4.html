@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OTP Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f9fc;
+      text-align: center;
+      padding-top: 100px;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      background-color: #28a745;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    h1 {
+      margin-top: 40px;
+      color: #333;
+      font-size: 32px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Click the button to generate a 4-digit OTP</h2>
+  <button onclick="generateOTP()">Generate OTP</button>
+  <h1 id="otp">Your OTP: ----</h1>
+
+  <script>
+    function generateOTP() {
+      // Generate a 4-digit random number (1000 to 9999)
+      const otp = Math.floor(1000 + Math.random() * 9000);
+      document.getElementById("otp").textContent = "Your OTP: " + otp;
+    }
+  </script>
+
+</body>
+</html>
